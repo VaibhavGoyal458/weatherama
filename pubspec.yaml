@@ -1,0 +1,43 @@
+name: weatherama
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  geolocator: ^5.3.2+2
+  http: ^0.12.2
+  flutter_spinkit: ^4.1.2
+  font_awesome_flutter: ^8.8.1
+  weather_icons: ^2.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/
+
+  fonts:
+    - family: Spartan MB
+      fonts:
+        - asset: fonts/SpartanMB-Black.otf
+          weight: 900
+    - family: Oswald
+      fonts:
+        - asset: fonts/Oswald/Oswald-Regular.ttf
+        - asset: fonts/Oswald/Oswald-ExtraLight.ttf
+          weight: 200
+        - asset: fonts/Oswald/Oswald-Light.ttf
+          weight: 300
+        - asset: fonts/Oswald/Oswald-Medium.ttf
+          weight: 500

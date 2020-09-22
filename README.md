@@ -1,16 +1,43 @@
-# weatherama
+# Weatherama
 
-A flutter application for displaying wether conditions
+Weatherama is a weather app created using Flutter in order to check the weather data of current
+device location or any other location.
 
-## Getting Started
+## Table of Contents
+* [General Info](#general-info)
+* [Dependencies](#dependencies)
+* [Demo](#demo)
+* [Setup](#setup)
 
-This project is a starting point for a Flutter application.
+## General Info
 
-A few resources to get you started if this is your first Flutter project:
+This app is created in order to understand the learn and understand the usage of external API's in
+a Flutter App. Free OpenWeatherMap APIs has been used in order to fetch the weather data.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Dependencies
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* [http Dart Package](https://pub.dev/packages/http)
+* [Geolocator Dart Package](https://pub.dev/packages/geolocator)
+* [Weather Icon Dart Package](https://pub.dev/packages/weather_icons)
+* [Oswald Google Font](https://fonts.google.com/specimen/Oswald)
+* [Flutter SpinKit Package](https://pub.dev/packages/flutter_spinkit)
+
+## Demo
+
+![demo](./images/demo.gif) ![hero_white]<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/hero_white.jpg" width="230px"> ![hero_black]<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/hero_black.jpg" width="230px"> 
+
+## Setup
+
+  ##### Clone the repository
+```bash
+git clone https://github.com/VaibhavGoyal458/weatherama.git
+```
+  ##### Move to desired folder
+```bash
+cd \Weatherama
+```
+
+  ##### Run the app
+```bash
+flutter run
+```

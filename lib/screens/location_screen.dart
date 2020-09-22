@@ -1,4 +1,3 @@
-import 'package:flutter/services.dart';
 import 'package:weather_icons/weather_icons.dart';
 import 'package:weatherama/screens/city_screen.dart';
 import 'package:weatherama/services/weather.dart';
@@ -71,20 +70,6 @@ class _LocationScreenState extends State<LocationScreen> {
         ? Colors.white54
         : Colors.black54;
 
-    TextStyle contentTextStyle = TextStyle(
-      fontFamily: 'Oswald',
-      fontWeight: FontWeight.w500,
-      fontSize: 26.0,
-      color: textColor,
-    );
-
-    TextStyle lightTempTextStyle = TextStyle(
-      fontFamily: 'Oswald',
-      fontWeight: FontWeight.w500,
-      fontSize: 16.0,
-      color: lightTextColor,
-    );
-
     //Main Scaffold Widget
     return Scaffold(
       backgroundColor: scaffoldBackgroundColor,
@@ -139,17 +124,12 @@ class _LocationScreenState extends State<LocationScreen> {
                   Text(
                     '${cityName.toUpperCase()}',
                     textAlign: TextAlign.center,
-                    style: contentTextStyle,
+                    style: kContentTextStyle.copyWith(color: textColor),
                   ),
                   Text(
                     '${weather.toUpperCase()}',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Oswald',
-                      fontWeight: FontWeight.w200,
-                      fontSize: 18.0,
-                      color: textColor,
-                    ),
+                    style: kSubContentTextStyle.copyWith(color: textColor),
                   ),
                   Center(
                     child: Container(
@@ -173,15 +153,17 @@ class _LocationScreenState extends State<LocationScreen> {
                         ),
                         Text(
                           ' ${minTemp.toStringAsFixed(0)}° /   ',
-                          style: lightTempTextStyle,
+                          style: kLightTempTextStyle.copyWith(
+                              color: lightTextColor),
                         ),
                         Text(
                           '${temperature.toStringAsFixed(1)}°',
-                          style: contentTextStyle,
+                          style: kContentTextStyle.copyWith(color: textColor),
                         ),
                         Text(
                           ' / ${maxTemp.toStringAsFixed(0)}°',
-                          style: lightTempTextStyle,
+                          style: kLightTempTextStyle.copyWith(
+                              color: lightTextColor),
                         ),
                       ],
                     ),
@@ -198,11 +180,13 @@ class _LocationScreenState extends State<LocationScreen> {
                         ),
                         Text(
                           '   ${wind.toStringAsFixed(0)} m/s   ',
-                          style: lightTempTextStyle,
+                          style: kLightTempTextStyle.copyWith(
+                              color: lightTextColor),
                         ),
                         Text(
                           WeatherModel().windDirection(windDirection),
-                          style: lightTempTextStyle,
+                          style: kLightTempTextStyle.copyWith(
+                              color: lightTextColor),
                         ),
                       ],
                     ),

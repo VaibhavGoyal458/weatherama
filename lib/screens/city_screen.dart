@@ -1,5 +1,6 @@
 import 'package:weatherama/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:weatherama/utilities/constants.dart';
 
 class CityScreen extends StatefulWidget {
   final Color backgroundColor;
@@ -11,7 +12,7 @@ class CityScreen extends StatefulWidget {
 }
 
 class _CityScreenState extends State<CityScreen> {
-  String cityName = '';
+  String cityName;
 
   @override
   Widget build(BuildContext context) {
@@ -49,17 +50,8 @@ class _CityScreenState extends State<CityScreen> {
                       style: TextStyle(
                         color: widget.backgroundColor,
                       ),
-                      decoration: InputDecoration(
-                        filled: true,
+                      decoration: kInputFieldDecoration.copyWith(
                         fillColor: widget.textColor,
-                        hintText: 'Enter city name',
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                          borderSide: BorderSide.none,
-                        ),
                       ),
                       onChanged: (value) {
                         setState(() {
@@ -85,11 +77,10 @@ class _CityScreenState extends State<CityScreen> {
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      cityName == '' ? '' : "Fetching weather for '$cityName'",
-                      style: TextStyle(
-                        fontFamily: 'Oswald',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16.0,
+                      cityName != null
+                          ? "Fetching weather for '$cityName'"
+                          : '',
+                      style: kSearchTextColor.copyWith(
                         color: widget.textColor,
                       ),
                     ),

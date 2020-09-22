@@ -24,7 +24,7 @@ a Flutter App. Free OpenWeatherMap APIs has been used in order to fetch the weat
 
 ## Demo
 
-![demo](./images/demo.gif) ![hero_white]<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/hero_white.jpg" width="230px"> ![hero_black]<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/hero_black.jpg" width="230px"> 
+![demo](./images/demo.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/hero_white.jpg" width="230px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/VaibhavGoyal458/weatherama/blob/master/images/next_white.jpg" width="230px"> 
 
 ## Setup
 
@@ -41,3 +41,5 @@ cd \Weatherama
 ```bash
 flutter run
 ```
+
+To get started with Flutter, view the official documentation.

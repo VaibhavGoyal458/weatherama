@@ -1,4 +1,3 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:weather_icons/weather_icons.dart';
 import 'package:weatherama/services/location.dart';
 import 'package:weatherama/services/networking.dart';

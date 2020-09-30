@@ -1,10 +1,12 @@
 import 'package:weather_icons/weather_icons.dart';
 import 'package:weatherama/screens/city_screen.dart';
+import 'package:weatherama/screens/loading_screen.dart';
 import 'package:weatherama/services/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:weatherama/utilities/constants.dart';
 
 class LocationScreen extends StatefulWidget {
+  static String id = 'LocationScreen';
   final locationWeather;
 
   LocationScreen({this.locationWeather});
@@ -82,8 +84,7 @@ class _LocationScreenState extends State<LocationScreen> {
               children: <Widget>[
                 FlatButton(
                   onPressed: () async {
-                    var weatherData = await weatherModel.getLocationWeather();
-                    updateUI(weatherData);
+                    Navigator.pushReplacementNamed(context, LoadingScreen.id);
                   },
                   child: Icon(
                     Icons.near_me,

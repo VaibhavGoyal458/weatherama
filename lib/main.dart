@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weatherama/screens/city_screen.dart';
 import 'package:weatherama/screens/loading_screen.dart';
+import 'package:weatherama/screens/location_screen.dart';
+import 'package:weatherama/screens/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +19,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       title: 'Weatherama',
-      home: LoadingScreen(),
+      initialRoute: Splash.id,
+      routes: {
+        Splash.id: (context) => Splash(),
+        LocationScreen.id: (context) => LocationScreen(),
+        LoadingScreen.id: (context) => LoadingScreen(),
+        CityScreen.id: (context) => CityScreen()
+      },
     );
   }
 }

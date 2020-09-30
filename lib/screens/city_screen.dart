@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:weatherama/utilities/constants.dart';
 
 class CityScreen extends StatefulWidget {
+  static String id = 'CityScreen';
   final Color backgroundColor;
   final Color textColor;
   CityScreen({this.backgroundColor, this.textColor});

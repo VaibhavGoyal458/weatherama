@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadingScreen extends StatefulWidget {
+  static String id = 'LoadingScreen';
   final String location;
   LoadingScreen({this.location});
   @override
@@ -16,7 +17,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
     if (widget.location == null) {
       weatherData = await WeatherModel().getLocationWeather();
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => LocationScreen(
@@ -39,9 +40,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: SpinKitDoubleBounce(
-          color: Colors.white,
+          color: Colors.black,
           size: 100.0,
         ),
       ),
